@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOi-Yo-Ecw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" image="hamburgerIcon" id="uP5-wm-oHL">
+                                        <connections>
+                                            <action selector="showHamburgarMenu:" destination="BYZ-38-t0r" id="Y0Z-Mi-yln"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJg-mp-TSZ" userLabel="main view">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                            </view>
+                            <view alpha="0.75" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZjL-Mg-clI">
+                                <rect key="frame" x="-414" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GqG-zd-pf0" appends="YES" id="6EJ-lr-7Fv"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ese-93-Elb">
+                                <rect key="frame" x="-280" y="0.0" width="280" height="852"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBF-zM-z3q">
+                                        <rect key="frame" x="0.0" y="59" width="280" height="759"/>
+                                        <connections>
+                                            <segue destination="PFC-96-Teg" kind="embed" identifier="hamburgerSegue" id="IL7-Ia-IvD"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vBF-zM-z3q" firstAttribute="leading" secondItem="ese-93-Elb" secondAttribute="leading" id="U87-33-Oag"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBF-zM-z3q" secondAttribute="trailing" id="pUO-rG-ENV"/>
+                                    <constraint firstAttribute="width" constant="280" id="pky-Ka-DWd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZjL-Mg-clI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6gx-r6-EFq"/>
+                            <constraint firstAttribute="bottom" secondItem="YJg-mp-TSZ" secondAttribute="bottom" id="BTV-OP-ydH"/>
+                            <constraint firstItem="YJg-mp-TSZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hqv-zS-oDq"/>
+                            <constraint firstItem="ese-93-Elb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-280" id="K5g-Os-nTR"/>
+                            <constraint firstItem="ZjL-Mg-clI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TT1-Bq-dpQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ZjL-Mg-clI" secondAttribute="bottom" id="VbD-hT-wyo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vBF-zM-z3q" secondAttribute="bottom" id="fhv-dj-7SN"/>
+                            <constraint firstItem="vBF-zM-z3q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mX2-Yg-9Mr"/>
+                            <constraint firstItem="zOi-Yo-Ecw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nPo-Hg-gaI"/>
+                            <constraint firstItem="YJg-mp-TSZ" firstAttribute="top" secondItem="zOi-Yo-Ecw" secondAttribute="bottom" id="qIb-c4-tji"/>
+                            <constraint firstItem="zOi-Yo-Ecw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u0p-Ms-ggB"/>
+                            <constraint firstItem="ese-93-Elb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xUt-VJ-pg8"/>
+                            <constraint firstItem="YJg-mp-TSZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xtN-ut-iTp"/>
+                            <constraint firstItem="zOi-Yo-Ecw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yBY-1f-p62"/>
+                            <constraint firstItem="ZjL-Mg-clI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yIe-nB-l5x"/>
+                            <constraint firstAttribute="bottom" secondItem="ese-93-Elb" secondAttribute="bottom" id="yUF-JP-8gm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backViewForHamburgar" destination="ZjL-Mg-clI" id="ly2-4P-aFL"/>
+                        <outlet property="hamburgarView" destination="ese-93-Elb" id="0Gb-Z4-Eru"/>
+                        <outlet property="leadingConstraintForHamburgarView" destination="K5g-Os-nTR" id="HqU-Z8-HGc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GqG-zd-pf0">
+                    <connections>
+                        <action selector="tappedOnHamburgerBackView:" destination="BYZ-38-t0r" id="nyM-IU-dc2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+        <!--Hamburgur View Controller-->
+        <scene sceneID="bwm-9n-OgD">
+            <objects>
+                <viewController id="PFC-96-Teg" customClass="HamburgurViewController" customModule="networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iMI-3a-REA">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="759"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btg-a1-RHn">
+                                <rect key="frame" x="16" y="159" width="248" height="35"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click Me" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="PFC-96-Teg" eventType="touchUpInside" id="hZ3-jS-B8h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uN8-GY-iNn"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Btg-a1-RHn" firstAttribute="leading" secondItem="uN8-GY-iNn" secondAttribute="leading" constant="16" id="jlX-jh-QXr"/>
+                            <constraint firstItem="Btg-a1-RHn" firstAttribute="top" secondItem="uN8-GY-iNn" secondAttribute="top" constant="100" id="maQ-RS-NZJ"/>
+                            <constraint firstItem="uN8-GY-iNn" firstAttribute="trailing" secondItem="Btg-a1-RHn" secondAttribute="trailing" constant="16" id="qBA-wE-3E2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lU-6O-zUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790.83969465648852" y="-15.140845070422536"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburgerIcon" width="33.333332061767578" height="33.333332061767578"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
